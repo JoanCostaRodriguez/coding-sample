@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repository constructs a municipality-level panel of **GDP per capita** by combining historical GDP and population data across multiple benchmark years, it is a modified and adapted sample of my awarded thesis: Market Access and Regional Inequality: Evidence from Brazil's Capital Relocation.
+This repository constructs a municipality-level panel of **GDP per capita** by combining historical GDP and population data across multiple benchmark years, it is a modified and adapted sample of my awarded thesis: "Market Access and Regional Inequality: Evidence from Brazil's Capital Relocation".
 In this sample I show how I constructed the GDP per capita for the later construction of the inequality indices facing some problems with the raw data available.
 
 The main task is entity harmonization: municipality names differ across official sources and over time. The pipeline implements a transparent and conservative matching procedure (exact + fuzzy) and outputs an analysis-ready dataset with GDP per capita.
@@ -19,7 +19,7 @@ The main task is entity harmonization: municipality names differ across official
 
 ## Data
 
-All the data is extracted from official sources such as the IBGE (Instituto Brasileiro de Geografia e Estatística
+All the data is extracted from official sources such as the IBGE (Instituto Brasileiro de Geografia e Estatística).
 
 It follows the structure:
 ```text
@@ -39,6 +39,7 @@ data/
     ├── population_1976_clean.xlsx
     ├── population_1980_clean.xlsx
     └── population_1992_clean.xlsx
+```
 
 Each GDP file contains:
 - a municipality identifier (`Codigo`)
@@ -50,7 +51,7 @@ Each population file contains:
 - population (`Population`)
 - province/state identifier (`State`)
 
-## Methodology (high level)
+## Methodology
 
 1. **Standardize municipality names**  
    Uppercase, remove punctuation, remove accent marks, normalize whitespace.
@@ -96,6 +97,7 @@ Running the pipeline produces:
 - `dist` — string distance (NA for exact matches)
 
 ## Project structure
+```text
 R/
 ├── 00_packages.R        # Load required packages
 ├── 01_paths.R           # Centralized path definitions (raw data read-only)
@@ -106,21 +108,22 @@ R/
 run_all.R                # Single entry point (runs full pipeline)
 output/
 └── (generated)          # Automatically created outputs
-
+```
 ## How to run
 
 1. Open the project root (recommended via an `.Rproj` file).
-2 Run: `run_all.R`
+   
+2. Run: `run_all.R`
 
 ## Sanity check
 
-The plot output/figures/sanity_log_gdp_pc_by_year.png should show:
+The plot output/figures/sanity_log_gdp_pc_by_year.png shows:
 
 - log(GDP per capita) is finite (no obvious zeros/inf/NaNs)
 
-distributions across years are plausible (no extreme scaling jumps)
+- Distributions across years are plausible (no extreme scaling jumps)
 
-no gross unit errors (e.g., values off by orders of magnitude)
+- No gross unit errors (e.g., values off by orders of magnitude)
 
 ## Notes
 
