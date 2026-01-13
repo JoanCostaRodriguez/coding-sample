@@ -104,7 +104,7 @@ R/
 ├── 10_matching.R        # Exact + conservative fuzzy matching; GDP per capita construction
 ├── 20_build_panel.R     # Year-by-year execution wrapper
 ├── 30_checks.R          # Diagnostic and integrity checks
-├── 30_sanity_plot.R     # Sanity-check plots
+├── 40_sanity_plot.R     # Sanity-check plots
 run_all.R                # Single entry point (runs full pipeline)
 output/
 └── (generated)          # Automatically created outputs
