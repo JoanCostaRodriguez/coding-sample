@@ -25,20 +25,21 @@ It follows the structure:
 
 data/
 └── raw/
-├── gdp_1939.xlsx
-├── gdp_1950.xlsx
-├── gdp_1960.xlsx
-├── gdp_1970.xlsx
-├── gdp_1975.xlsx
-├── gdp_1980.xlsx
-├── gdp_1996.xlsx
-├── population_1940_clean.xlsx
-├── population_1950_clean.xlsx
-├── population_1960_clean.xlsx
-├── population_1970_clean.xlsx
-├── population_1976_clean.xlsx
-├── population_1980_clean.xlsx
-└── population_1992_clean.xlsx
+    ├── gdp_1939.xlsx
+    ├── gdp_1950.xlsx
+    ├── gdp_1960.xlsx
+    ├── gdp_1970.xlsx
+    ├── gdp_1975.xlsx
+    ├── gdp_1980.xlsx
+    ├── gdp_1996.xlsx
+    ├── population_1940_clean.xlsx
+    ├── population_1950_clean.xlsx
+    ├── population_1960_clean.xlsx
+    ├── population_1970_clean.xlsx
+    ├── population_1976_clean.xlsx
+    ├── population_1980_clean.xlsx
+    └── population_1992_clean.xlsx
+
 
 Each GDP file contains:
 - a municipality identifier (`Codigo`)
@@ -97,15 +98,15 @@ Running the pipeline produces:
 
 ## Project structure
 R/
-├── 00_packages.R # Package loading
-├── 01_paths.R # Centralized paths (raw-only)
-├── 10_matching.R # Exact + fuzzy matching + GDP per capita construction
-├── 20_build_panel.R # Year-by-year execution wrapper
-├── 30_checks.R # Diagnostic checks
-├── 30_sanity_plot.R # Sanity-check plot
-run_all.R # Single entry point
+├── 00_packages.R        # Load required packages
+├── 01_paths.R           # Centralized path definitions (raw data read-only)
+├── 10_matching.R        # Exact + conservative fuzzy matching; GDP per capita construction
+├── 20_build_panel.R     # Year-by-year execution wrapper
+├── 30_checks.R          # Diagnostic and integrity checks
+├── 30_sanity_plot.R     # Sanity-check plots
+run_all.R                # Single entry point (runs full pipeline)
 output/
-└── (generated)
+└── (generated)          # Automatically created outputs
 
 ## How to run
 
