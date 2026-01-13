@@ -22,7 +22,7 @@ The main task is entity harmonization: municipality names differ across official
 All the data is extracted from official sources such as the IBGE (Instituto Brasileiro de Geografia e Estatística
 
 It follows the structure:
-
+```text
 data/
 └── raw/
     ├── gdp_1939.xlsx
@@ -39,7 +39,6 @@ data/
     ├── population_1976_clean.xlsx
     ├── population_1980_clean.xlsx
     └── population_1992_clean.xlsx
-
 
 Each GDP file contains:
 - a municipality identifier (`Codigo`)
