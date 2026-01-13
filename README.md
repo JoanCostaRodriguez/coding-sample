@@ -12,10 +12,10 @@ The main task is entity harmonization: municipality names differ across official
 
 ## What this repo demonstrates
 
-- Reproducible, modular R pipeline (single entry point via `run_all.R`)
-- Transparent matching logic with auditable diagnostics
-- Conservative fuzzy matching with one-to-one assignment
-- Clean, analysis-ready output with GDP per capita
+- Reproducible, modular R pipeline (single entry point via `run_all.R`).
+- Transparent matching logic with auditable diagnostics.
+- Conservative fuzzy matching with one-to-one assignment.
+- Clean, analysis-ready output with GDP per capita.
 
 ## Data
 
@@ -42,14 +42,14 @@ data/
 ```
 
 Each GDP file contains:
-- a municipality identifier (`Codigo`)
-- a municipality name (`Municipality`)
-- a GDP value column for the specified year (e.g., `"1939"`)
+- a municipality identifier (`Codigo`).
+- a municipality name (`Municipality`).
+- a GDP value column for the specified year (e.g., `"1939"`).
 
 Each population file contains:
-- municipality name (`Municipality`)
-- population (`Population`)
-- province/state identifier (`State`)
+- municipality name (`Municipality`).
+- population (`Population`).
+- province/state identifier (`State`).
 
 ## Methodology
 
@@ -60,9 +60,9 @@ Each population file contains:
    Deterministic merge on standardized names.
 
 3. **Fuzzy match for remaining cases**  
-   - Compute string distances (Optimal String Alignment, OSA) between remaining unmatched names  
-   - Keep candidates within a distance threshold  
-   - Select matches using a greedy one-to-one assignment
+   - Compute string distances (Optimal String Alignment, OSA) between remaining unmatched names.
+   - Keep candidates within a distance threshold.  
+   - Select matches using a greedy one-to-one assignment.
 
 4. **Construct GDP per capita**  
    `gdp_pc = gdp_value / population`  
