@@ -1,0 +1,6 @@
+ERROR: [38;5;232m[36mℹ[38;5;232m In argument: `res = purrr::pmap(...)`.[39m
+[1mCaused by error in `purrr::pmap()`:[22m
+[38;5;232m[36mℹ[38;5;232m In index: 7.[39m
+[1mCaused by error in `group_by()`:[22m
+[38;5;232m[33m![38;5;232m Must group by variables found in `.data`.
+[31m✖[38;5;232m Column `code` is not found.[39m

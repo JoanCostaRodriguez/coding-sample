@@ -1,0 +1,14 @@
+---
+title: "analysis"
+author: "Joan Costa"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+source("R/00_packages.R")
+source("R/01_paths.R")
+source("R/10_matching.R")
+source("R/20_build_panel.R")
+source("R/30_checks.R")
+```
