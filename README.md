@@ -42,14 +42,14 @@ data/
 ```
 
 Each GDP file contains:
-- a municipality identifier (`Codigo`).
-- a municipality name (`Municipality`).
-- a GDP value column for the specified year (e.g., `"1939"`).
+- a municipality identifier (`Codigo`)
+- a municipality name (`Municipality`)
+- a GDP value column for the specified year (e.g., `"1939"`)
 
 Each population file contains:
-- municipality name (`Municipality`).
-- population (`Population`).
-- province/state identifier (`State`).
+- municipality name (`Municipality`)
+- population (`Population`)
+- province/state identifier (`State`)
 
 ## Methodology
 
