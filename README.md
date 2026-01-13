@@ -5,10 +5,10 @@
 
 ## Overview
 
-This repository constructs a municipality-level panel of **GDP per capita** by combining historical GDP and population data across multiple benchmark years, it is a modified and adapted sample of my awarded thesis: "Market Access and Regional Inequality: Evidence from Brazil's Capital Relocation".
+This repository constructs a municipality-level panel of **GDP per capita** by combining historical GDP and population data across multiple benchmark years, it is a modified and adapted sample of my awarded thesis: "*Market Access and Regional Inequality: Evidence from Brazil's Capital Relocation*".
 In this sample I show how I constructed the GDP per capita for the later construction of the inequality indices facing some problems with the raw data available.
 
-The main task is entity harmonization: municipality names differ across official sources and over time. The pipeline implements a transparent and conservative matching procedure (exact + fuzzy) and outputs an analysis-ready dataset with GDP per capita.
+The main task is **entity harmonization**: municipality names differ across official sources and over time. The pipeline implements a transparent and conservative matching procedure (exact + fuzzy) and outputs an analysis-ready dataset with GDP per capita.
 
 ## What this repo demonstrates
 
